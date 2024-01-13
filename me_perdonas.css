@@ -4,13 +4,10 @@ div {
     align-items: center;
 }
 
-
 h1 {
     padding: 10px;
     color: #711DB0;
 }
-
-
 
 button {
     color: brown;
@@ -19,8 +16,7 @@ button {
     border: 3px solid #711DB0;
     border-radius: 10px;
     background-color: transparent;
-    font-size: xx-large;
-    
+    font-size: large;  /* Cambiado de xx-large a large para dispositivos móviles */
 }
 
 #Si {
@@ -31,32 +27,26 @@ button {
 #No {
     grid-row: 5;
     grid-column: 6;
-    
 }
 
 section {
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    width: 1200px;
-    height: 600px;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));  /* Hace que las columnas se ajusten automáticamente */
+    grid-gap: 10px;  /* Espacio entre las celdas */
+    width: 100%;  /* Se ajusta al ancho del contenedor padre */
 }
 
 body {
-    max-width: 1200px;
-    max-height: 673px;
-    margin: 0 auto;
+    max-width: 100%;  /* Se ajusta al ancho del dispositivo */
+    max-height: 100vh;  /* Se ajusta al alto del dispositivo */
+    margin: 0;
     background-image: url(/foto/pngtree-landscapes-wallpaper-images-picture-image_3021437.jpg);
-    background-repeat: no-repeat; 
-    background-position: center center; 
-     background-size: cover;
-    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 p {
-    font-size: xx-large;
-    justify-content: center;
+    font-size: large;  /* Cambiado de xx-large a large para dispositivos móviles */
     color: pink;
 }
